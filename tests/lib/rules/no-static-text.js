@@ -35,6 +35,7 @@ ruleTester.run("no-static-text", rule, {
 
   invalid: [
     {
+      filename: 'somepath/src/components/another-sub/libraryAcc/foo/BarGammaZZs.ts',
       code: `
         class Comp1 extends Component {
           render() {
@@ -48,10 +49,10 @@ ruleTester.run("no-static-text", rule, {
           data: { text: 'test' },
         },
       ],
-      output:`
+      output: `
         class Comp1 extends Component {
           render() {
-            return (<div><FormattedMessage id="app." defaultMessage="test"/></div>);
+            return (<div><FormattedMessage id="app.components.another_sub.library_acc.foo.bar_gamma_z_zs." defaultMessage="test"/></div>);
           }
         }
       `
