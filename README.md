@@ -15,6 +15,16 @@ Next, install `eslint-plugin-react-intl`:
 ```sh
 npm install eslint-plugin-react-intl --save-dev
 ```
+or add it locally on a subdirectory after the checkout: 
+```
+"devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    ...
+    "eslint-plugin-react-intl": "file:../eslint-plugin-react-intl",
+    ...
+}
+```
 
 ## Usage
 
@@ -34,7 +44,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "react-intl/rule-name": 2
+        "react-intl/no-static-text": "warn"
     }
 }
 ```
